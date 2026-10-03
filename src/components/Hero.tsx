@@ -9,6 +9,7 @@ import {
   Award
 } from 'lucide-react';
 import { STUDIO_INFO, HERO_SLIDES } from '../data/servicesData';
+import { OptimizedImage } from './OptimizedImage';
 
 interface HeroProps {
   onOpenBooking: () => void;
@@ -19,6 +20,7 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onExploreServices, isDarkMode }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [taglineIndex, setTaglineIndex] = useState(0);
+  const [heroLoaded, setHeroLoaded] = useState(false);
 
   const taglines = [
     "Look Good, Feel Better. Because You Deserve the Best.",
@@ -37,11 +39,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onExploreServices, is
 
   // Image Loop Slider Timer (Every 5 seconds)
   useEffect(() => {
+    if (!heroLoaded) return;
     const slideTimer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
     }, 5000);
     return () => clearInterval(slideTimer);
-  }, []);
+  }, [heroLoaded]);
 
   const handleWhatsapp = () => {
     const text = encodeURIComponent(
@@ -62,15 +65,18 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onExploreServices, is
             }`}
             style={{ transitionProperty: 'opacity, transform' }}
           >
-            <img
+            {(index === 0 || heroLoaded) && <OptimizedImage
               src={slide.image}
               alt={slide.title}
               className="w-full h-full object-cover object-center brightness-105 contrast-[1.04]"
-              referrerPolicy="no-referrer"
-              onError={(e) => {
-                (e.target as HTMLImageElement).src = '/src/assets/images/hero_luxury_reception_interior_1791017024309.jpg';
-              }}
-            />
+              width={1376}
+              height={768}
+              sizes="100vw"
+              loading="eager"
+              fetchPriority={index === 0 ? 'high' : 'low'}
+              fallbackSrc={HERO_SLIDES[0].image}
+              onLoad={index === 0 ? () => setHeroLoaded(true) : undefined}
+            />}
           </div>
         ))}
 

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Sparkles, ChevronLeft, ChevronRight, Image as ImageIcon, ExternalLink, Maximize2, X } from 'lucide-react';
 import { GALLERY_ITEMS, STUDIO_INFO } from '../data/servicesData';
 import { GalleryItem } from '../types';
+import { OptimizedImage } from './OptimizedImage';
+import glowTransformationImage from '../assets/images/gallery_glow_transformation_1791015597410.webp';
 
 interface GallerySectionProps {
   isDarkMode: boolean;
@@ -164,14 +166,12 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ isDarkMode }) =>
                 >
                   {/* Photo area */}
                   <div className="relative h-[280px] sm:h-[340px] overflow-hidden bg-black">
-                    <img
+                    <OptimizedImage
                       src={item.url}
                       alt={item.title}
                       className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
-                      referrerPolicy="no-referrer"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).src = '/src/assets/images/gallery_glow_transformation_1791015597410.jpg';
-                      }}
+                      sizes="(min-width: 640px) 420px, 85vw"
+                      fallbackSrc={glowTransformationImage}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
 
@@ -288,14 +288,13 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ isDarkMode }) =>
             </button>
 
             <div className="max-h-[75vh] overflow-hidden bg-black flex items-center justify-center">
-              <img
+              <OptimizedImage
                 src={selectedModalImage.url}
                 alt={selectedModalImage.title}
                 className="max-h-[75vh] w-auto object-contain"
-                referrerPolicy="no-referrer"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = '/src/assets/images/gallery_glow_transformation_1791015597410.jpg';
-                }}
+                sizes="(min-width: 1024px) 1024px, 100vw"
+                loading="eager"
+                fallbackSrc={glowTransformationImage}
               />
             </div>
 
