@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sub: 'Cormorant Garamond', Garamond, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.font-serif-brand {
+  font-family: var(--font-serif);
+}
+
+.font-editorial {
+  font-family: var(--font-sub);
+}
+
+.font-sans-clean {
+  font-family: var(--font-sans);
+}
+
+/* Luxury Gold Text Gradient */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #F9F1D8 0%, #D4AF37 45%, #AA820A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-text-gradient-light {
+  background: linear-gradient(135deg, #996515 0%, #B8860B 45%, #6E4703 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-subtle-gradient {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.03) 100%);
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.18);
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(18, 18, 20, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* 3D Button Light Pass Animation */
+@keyframes lightPass {
+  0% {
+    transform: translateX(-150%) skewX(-25deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  60% {
+    transform: translateX(250%) skewX(-25deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateX(250%) skewX(-25deg);
+    opacity: 0;
+  }
+}
+
+.animate-light-pass {
+  animation: lightPass 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* 3D Perspective Coverflow */
+.perspective-coverflow {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+.card-3d-left {
+  transform: rotateY(26deg) scale(0.85) translateZ(-60px);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-3d-right {
+  transform: rotateY(-26deg) scale(0.85) translateZ(-60px);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-3d-center {
+  transform: rotateY(0deg) scale(1) translateZ(40px);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Smooth custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0B0C;
+}
+
+.light ::-webkit-scrollbar-track,
+html:not(.dark) ::-webkit-scrollbar-track {
+  background: #F4F1EA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.45);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.85);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
