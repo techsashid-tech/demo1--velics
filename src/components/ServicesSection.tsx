@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Sparkles, Clock, Check, ArrowRight, MessageCircle, Info, X, Search } from 'lucide-react';
 import { SERVICES, STUDIO_INFO } from '../data/servicesData';
 import { ServiceCategory, ServiceItem } from '../types';
+import { OptimizedImage } from './OptimizedImage';
+import skinRejuvenationImage from '../assets/images/service_skin_rejuvenation_1791015581795.webp';
 
 interface ServicesSectionProps {
   onBookService: (serviceTitle: string) => void;
@@ -142,14 +144,12 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onBookService,
               <div>
                 {/* Image Container with Zoom Effect */}
                 <div className="relative h-60 overflow-hidden bg-[#1D1D22]">
-                  <img
+                  <OptimizedImage
                     src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
-                    referrerPolicy="no-referrer"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = '/src/assets/images/service_skin_rejuvenation_1791015581795.jpg';
-                    }}
+                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    fallbackSrc={skinRejuvenationImage}
                   />
                   <div
                     className={`absolute inset-0 transition-opacity duration-300 ${
@@ -293,14 +293,13 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onBookService,
             </div>
 
             <div className="mb-6 rounded-2xl overflow-hidden h-64 bg-[#1D1D22]">
-              <img
+              <OptimizedImage
                 src={selectedService.image}
                 alt={selectedService.title}
                 className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = '/src/assets/images/service_skin_rejuvenation_1791015581795.jpg';
-                }}
+                sizes="(min-width: 768px) 672px, 100vw"
+                loading="eager"
+                fallbackSrc={skinRejuvenationImage}
               />
             </div>
 

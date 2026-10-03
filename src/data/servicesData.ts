@@ -1,4 +1,14 @@
 import { ServiceItem, GalleryItem } from '../types';
+import glowTransformationImage from '../assets/images/gallery_glow_transformation_1791015597410.webp';
+import hairTrichologyImage from '../assets/images/gallery_hair_trichology_1791015608979.webp';
+import aestheticLoungeImage from '../assets/images/hero_luxe_aesthetic_lounge_1791015568296.webp';
+import facialGlowImage from '../assets/images/hero_luxe_facial_glow_1791015551007.webp';
+import receptionImage from '../assets/images/hero_luxury_reception_interior_1791017024309.webp';
+import hairPrpImage from '../assets/images/service_hair_prp_therapy_1791016999123.webp';
+import hydrafacialImage from '../assets/images/service_hydrafacial_md_1791016988207.webp';
+import wellnessImage from '../assets/images/service_iv_wellness_lounge_1791017012692.webp';
+import laserImage from '../assets/images/service_laser_hair_removal_1791016973021.webp';
+import skinRejuvenationImage from '../assets/images/service_skin_rejuvenation_1791015581795.webp';
 
 export const STUDIO_INFO = {
   name: "VELICS THE GLOW STUDIO",
@@ -25,35 +35,35 @@ export const STUDIO_INFO = {
 export const HERO_SLIDES = [
   {
     id: 1,
-    image: "/src/assets/images/hero_luxury_reception_interior_1791017024309.jpg",
+    image: receptionImage,
     title: "Flagship Sanctuary in Bhubaneswar",
     subtitle: "Architectural tranquility equipped with US-FDA approved technologies in Chandrasekharpur",
     badge: "Chandrasekharpur Flagship"
   },
   {
     id: 2,
-    image: "/src/assets/images/service_hydrafacial_md_1791016988207.jpg",
+    image: hydrafacialImage,
     title: "Clinical Radiance & Hydrafacial MD",
     subtitle: "Vortex acid peel, deep cellular antioxidant infusion for instant luminous glass skin",
     badge: "Signature Luminous Skin"
   },
   {
     id: 3,
-    image: "/src/assets/images/hero_luxe_aesthetic_lounge_1791015568296.jpg",
+    image: aestheticLoungeImage,
     title: "VIP Consultation Suites",
     subtitle: "Unhurried, personalized doctor consultations tailored to your individual aesthetic journey",
     badge: "Haute Aesthetic Sanctuary"
   },
   {
     id: 4,
-    image: "/src/assets/images/service_laser_hair_removal_1791016973021.jpg",
+    image: laserImage,
     title: "Triple-Wavelength Painless Laser",
     subtitle: "Advanced diode cooling technology for lifelong smooth, hair-free confidence",
     badge: "Advanced Laser Suites"
   },
   {
     id: 5,
-    image: "/src/assets/images/gallery_glow_transformation_1791015597410.jpg",
+    image: glowTransformationImage,
     title: "Complete Transformation Journeys",
     subtitle: "Skin • Hair • Aesthetics • Wellness curated under one bespoke, clinical roof",
     badge: "5.0 Google Verified Care"
@@ -70,7 +80,7 @@ export const SERVICES: ServiceItem[] = [
     description: "Experience effortless, silky-smooth skin with our triple-wavelength laser hair reduction system. Engineered with integrated contact skin cooling for maximum comfort on all Indian skin types.",
     benefits: ["Zero razor bumps or ingrown hairs", "Clinically proven permanent reduction", "Virtually painless with sapphire contact chilling"],
     duration: "45–60 mins",
-    image: "/src/assets/images/service_laser_hair_removal_1791016973021.jpg",
+    image: laserImage,
     iconName: "Zap",
     popular: true
   },
@@ -83,7 +93,7 @@ export const SERVICES: ServiceItem[] = [
     description: "Our signature multi-stage medical hydrafacial deeply purifies, extracts stubborn impurities, and infuses active hyaluronic acid and peptide antioxidants for instant glass-skin radiance.",
     benefits: ["Instant luminous dewy glow", "Unclogs enlarged pores without irritation", "Intense cellular hydration barrier restoration"],
     duration: "60 mins",
-    image: "/src/assets/images/service_hydrafacial_md_1791016988207.jpg",
+    image: hydrafacialImage,
     iconName: "Droplets",
     popular: true
   },
@@ -96,7 +106,7 @@ export const SERVICES: ServiceItem[] = [
     description: "Master aesthetic treatments administered by certified specialists to subtly smooth expression lines, sculpt jawlines, and restore natural youthful volume with US-FDA approved formulations.",
     benefits: ["Preserves natural facial expressions", "Restores youthful facial contours", "Visible, refined results lasting 6–12 months"],
     duration: "30–45 mins",
-    image: "/src/assets/images/service_skin_rejuvenation_1791015581795.jpg",
+    image: skinRejuvenationImage,
     iconName: "Sparkles",
     popular: true
   },
@@ -109,7 +119,7 @@ export const SERVICES: ServiceItem[] = [
     description: "Harness the regenerative power of your own platelet growth factors. Stimulates micro-circulation, stops active hair fall, and triggers dense new follicle regrowth.",
     benefits: ["100% natural, biocompatible therapy", "Stimulates thicker hair shaft caliber", "Effective for male and female pattern thinning"],
     duration: "60 mins",
-    image: "/src/assets/images/service_hair_prp_therapy_1791016999123.jpg",
+    image: hairPrpImage,
     iconName: "Activity",
     popular: true
   },
@@ -122,7 +132,7 @@ export const SERVICES: ServiceItem[] = [
     description: "State-of-the-art microsurgical follicular unit extraction ensuring natural hairline design, maximum graft survival, and high density with rapid recovery.",
     benefits: ["Lifelong natural hair growth", "Virtually scarless micro-punch extraction", "Custom artistic hairline alignment"],
     duration: "Half-day procedure",
-    image: "/src/assets/images/gallery_hair_trichology_1791015608979.jpg",
+    image: hairTrichologyImage,
     iconName: "Feather"
   },
   {
@@ -134,7 +144,7 @@ export const SERVICES: ServiceItem[] = [
     description: "Weightless nano-ring, tape-in, and micro-keratin extensions customized to your exact hair tone and texture for breathtaking volume and length.",
     benefits: ["Zero damage to natural hair follicles", "Seamlessly blended and styled", "Heat-styleable and washable"],
     duration: "90–120 mins",
-    image: "/src/assets/images/gallery_hair_trichology_1791015608979.jpg",
+    image: hairTrichologyImage,
     iconName: "Scissors"
   },
   {
@@ -146,7 +156,7 @@ export const SERVICES: ServiceItem[] = [
     description: "Reawaken fatigued skin with customized clinical peels, microneedling RF, and carbon hollywood peels designed to reverse sun damage and texture irregularities.",
     benefits: ["Refines stubborn acne scars", "Tightens open pores and stimulates collagen", "Evens hyperpigmentation and melasma"],
     duration: "60 mins",
-    image: "/src/assets/images/service_skin_rejuvenation_1791015581795.jpg",
+    image: skinRejuvenationImage,
     iconName: "Sun"
   },
   {
@@ -158,7 +168,7 @@ export const SERVICES: ServiceItem[] = [
     description: "Target deep SMAS tissue layers to lift sagging jowls, tighten neck contours, and stimulate long-term elastin without any surgical downtime.",
     benefits: ["Defines jawline and cheek contours", "Stimulates deep neocollagenesis", "Non-invasive with zero social downtime"],
     duration: "60–75 mins",
-    image: "/src/assets/images/service_laser_hair_removal_1791016973021.jpg",
+    image: laserImage,
     iconName: "ShieldCheck"
   },
   {
@@ -170,7 +180,7 @@ export const SERVICES: ServiceItem[] = [
     description: "Handcrafted classic, hybrid, and Russian volume lashes applied with medical-grade hypoallergenic bonding for captivating, weightless eye definition.",
     benefits: ["Customized curl, length, and density", "Completely mascara-free daily glamour", "Water-resistant with 4–6 week retention"],
     duration: "75–90 mins",
-    image: "/src/assets/images/gallery_glow_transformation_1791015597410.jpg",
+    image: glowTransformationImage,
     iconName: "Eye"
   },
   {
@@ -182,7 +192,7 @@ export const SERVICES: ServiceItem[] = [
     description: "Relax in our private wellness lounge while nutrient-rich intravenous formulas replenish cellular vitality, elevate energy, and flush out metabolic toxins.",
     benefits: ["100% bio-availability bypassing digestion", "Instant energy revitalization & immunity surge", "Deep cellular hydration for inner luminescence"],
     duration: "45 mins",
-    image: "/src/assets/images/service_iv_wellness_lounge_1791017012692.jpg",
+    image: wellnessImage,
     iconName: "HeartPulse",
     popular: true
   },
@@ -195,7 +205,7 @@ export const SERVICES: ServiceItem[] = [
     description: "Medical-grade reduced glutathione paired with high-dose vitamin C to neutralize free radicals, inhibit excessive melanin synthesis, and restore a crystal-clear complexioned glow.",
     benefits: ["Systemic skin tone clarification", "Powerful hepatic liver detoxification", "Rejuvenates overall body vitality"],
     duration: "45 mins",
-    image: "/src/assets/images/hero_luxe_facial_glow_1791015551007.jpg",
+    image: facialGlowImage,
     iconName: "Gem",
     popular: true
   },
@@ -208,7 +218,7 @@ export const SERVICES: ServiceItem[] = [
     description: "Pamper hands and feet with sterile European dry manicures, long-lasting builder gel sculpting, and nourishing cuticle botanical rituals.",
     benefits: ["Non-toxic chip-resistant formulas", "Sterilized medical-grade implements", "Custom bespoke nail art & chrome finishes"],
     duration: "60–90 mins",
-    image: "/src/assets/images/hero_luxe_aesthetic_lounge_1791015568296.jpg",
+    image: aestheticLoungeImage,
     iconName: "Smile"
   },
   {
@@ -220,7 +230,7 @@ export const SERVICES: ServiceItem[] = [
     description: "Complete bridal radiance packages including pre-wedding skin brightening, HD airbrush makeup, couture hair sculpting, and veil draping for your unforgettable milestone.",
     benefits: ["Complete pre-bridal skin & body timeline", "Sweat-proof, 18-hour HD flawless camera wear", "Includes trial session and bespoke consultation"],
     duration: "Full bespoke session",
-    image: "/src/assets/images/gallery_glow_transformation_1791015597410.jpg",
+    image: glowTransformationImage,
     iconName: "Crown",
     popular: true
   }
@@ -229,56 +239,56 @@ export const SERVICES: ServiceItem[] = [
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "g1",
-    url: "/src/assets/images/gallery_glow_transformation_1791015597410.jpg",
+    url: glowTransformationImage,
     title: "Glass-Skin Radiance Transformation",
     category: "Luminous Skincare",
     description: "Dermatological post-hydrafacial glow and even skin tone restoration."
   },
   {
     id: "g2",
-    url: "/src/assets/images/service_hydrafacial_md_1791016988207.jpg",
+    url: hydrafacialImage,
     title: "Hydrafacial MD Clinical Suite",
     category: "Advanced Skincare",
     description: "Triple-stage vortex infusion and active antioxidant dermal delivery."
   },
   {
     id: "g3",
-    url: "/src/assets/images/hero_luxury_reception_interior_1791017024309.jpg",
+    url: receptionImage,
     title: "Grand Reception & Lounge",
     category: "Studio Ambiance",
     description: "Serene architectural sanctuary on Tulasi Vihar Rd, Chandrasekharpur."
   },
   {
     id: "g4",
-    url: "/src/assets/images/service_laser_hair_removal_1791016973021.jpg",
+    url: laserImage,
     title: "Painless Diode Laser Technology",
     category: "Laser Aesthetics",
     description: "Triple-wavelength laser equipped with sapphire sub-zero contact cooling."
   },
   {
     id: "g5",
-    url: "/src/assets/images/service_hair_prp_therapy_1791016999123.jpg",
+    url: hairPrpImage,
     title: "Trichology & PRP Follicle Suite",
     category: "Hair Restoration",
     description: "Precision scalp diagnostics and autologous platelet growth therapy."
   },
   {
     id: "g6",
-    url: "/src/assets/images/service_iv_wellness_lounge_1791017012692.jpg",
+    url: wellnessImage,
     title: "Private IV Wellness Lounge",
     category: "Holistic Wellness",
     description: "Deep cellular hydration, master glutathione and vitamin infusions."
   },
   {
     id: "g7",
-    url: "/src/assets/images/service_skin_rejuvenation_1791015581795.jpg",
+    url: skinRejuvenationImage,
     title: "Precision Facial Contouring",
     category: "Facial Aesthetics",
     description: "Artisan physician line softening and natural volumetric sculpting."
   },
   {
     id: "g8",
-    url: "/src/assets/images/hero_luxe_aesthetic_lounge_1791015568296.jpg",
+    url: aestheticLoungeImage,
     title: "Bespoke Bridal Glamour Suite",
     category: "Bridal Artistry",
     description: "Couture wedding day skin prep, styling and luxury client hospitality."
